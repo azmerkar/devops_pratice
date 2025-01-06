@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name:
+  namespace: argocd
+spec:
+  destination:
+    namespace:
+    server: ""
+  project: default
+  source:
+    path:
+    repoURL: ""
+    targetRevision:
+    directory:
+      recurse: true
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
